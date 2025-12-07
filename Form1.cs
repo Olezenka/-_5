@@ -20,7 +20,15 @@ namespace РКИСЛР_5
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ModelEF model = new ModelEF();
+            dataGridView1.DataSource = model.Student.ToList();
+        }
 
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Form2AddData form = new Form2AddData();
+            form.Show();
+            Hide();
         }
     }
 }
